@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerZoom : MonoBehaviour
 {
     [Header("Zoom Settings")]
-    [SerializeField] Transform zoomPoint;
+    public Transform zoomPoint;
     Vector3 originalPosition;
     Quaternion originalRotation;
     [SerializeField] Camera cam;
