@@ -16,6 +16,8 @@ public class SceneRandomizer : MonoBehaviour
     public bool justOneTime = false;
     private bool alreadyDone = false;
 
+
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
@@ -47,7 +49,8 @@ public class SceneRandomizer : MonoBehaviour
         foreach (var obj in v.objetosActivar)
         {
             if (obj != null)
-                obj.SetActive(true);
+                obj.transform.position = gameObject.transform.position; // Mover el objeto a la posición del trigger
+            obj.SetActive(true);
         }
 
         foreach (var obj in v.objetosDesactivar)
