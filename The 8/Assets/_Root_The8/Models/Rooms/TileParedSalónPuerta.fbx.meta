@@ -3,7 +3,22 @@ guid: 7914ee49746755a498abab297bb03832
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Door
+    second: {fileID: 2100000, guid: ea0cc334068650943a40f8aef8bcafc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "M_ParedSal\xF3n"
+    second: {fileID: 2100000, guid: c6490efef455cb8438353961a746c20c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Trim
+    second: {fileID: 2100000, guid: 34ea3e6c1fc84264d84cb83d98532dbd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
