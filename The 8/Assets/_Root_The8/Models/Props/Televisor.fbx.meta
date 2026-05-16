@@ -3,7 +3,12 @@ guid: 397cd4e7dd20f9141975102b5ac66eed
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Tele
+    second: {fileID: 2100000, guid: 35ce206f591c4af40ace5999ca10500b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

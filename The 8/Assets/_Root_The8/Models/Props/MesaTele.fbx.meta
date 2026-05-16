@@ -3,7 +3,12 @@ guid: a87f72fdbdb961b4aa2e5c0a136247c7
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MesaTele
+    second: {fileID: 2100000, guid: f7ff44755affd2048a5fb3a609ff8294, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
