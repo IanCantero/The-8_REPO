@@ -3,7 +3,12 @@ guid: 937c7152cd3d6424486da9926612924c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "M_Sill\xF3n"
+    second: {fileID: 2100000, guid: d8e9cec69c403d64392c00b6373f96a8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
