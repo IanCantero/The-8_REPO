@@ -3,7 +3,12 @@ guid: 6f97f8f241702174582881ec24d84971
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Estanteria
+    second: {fileID: 2100000, guid: 163b3a0332aa23049b3c3dc8145b0504, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
