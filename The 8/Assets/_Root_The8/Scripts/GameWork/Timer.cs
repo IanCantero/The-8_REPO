@@ -4,10 +4,20 @@ public class Timer : MonoBehaviour
 {
     public float tiempo = 0f;
     public TMPro.TextMeshProUGUI texto;
+    public bool isCounting;
+
+
+    void Start()
+    {
+        isCounting = true;
+    }
 
     void Update()
     {
-        tiempo += Time.deltaTime;
+        if (isCounting)
+        {
+            tiempo += Time.deltaTime;
+        }
     }
 
     public void MostrarTiempo()
