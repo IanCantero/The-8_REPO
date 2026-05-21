@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class GrannyAIBase : MonoBehaviour
 {
@@ -46,12 +47,14 @@ public class GrannyAIBase : MonoBehaviour
             currentState = State.StandingUp;
             anim.SetBool("isSitting", false);   
             anim.SetTrigger("StandUp");
+            StartCoroutine(OnStandUpFinished());
         }
     }
 
     // Este método puedes llamarlo desde un Animation Event
-    public void OnStandUpFinished()
+    IEnumerator OnStandUpFinished()
     {
+        yield return new WaitForSeconds(2f); // Espera un segundo antes de empezar a caminar
         currentState = State.Walking;
         agent.isStopped = false;
         agent.SetDestination(walkpoints[currentWalkpointIndex].position);
