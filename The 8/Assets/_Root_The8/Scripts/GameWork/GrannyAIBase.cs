@@ -25,6 +25,7 @@ public class GrannyAIBase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        anim.SetTrigger("isSitting");
         //Asunsion quieta
         agent.isStopped = true; 
     }
@@ -43,6 +44,7 @@ public class GrannyAIBase : MonoBehaviour
         if (currentState == State.Sitting)
         {
             currentState = State.StandingUp;
+            anim.SetBool("isSitting", false);   
             anim.SetTrigger("StandUp");
         }
     }
