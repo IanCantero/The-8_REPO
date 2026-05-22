@@ -57,9 +57,11 @@ public class GrannyAIBase : MonoBehaviour
         yield return new WaitForSeconds(2f); // Espera un segundo antes de empezar a caminar
         currentState = State.Walking;
         agent.isStopped = false;
-        agent.SetDestination(walkpoints[currentWalkpointIndex].position);
 
         anim.SetBool("isWalking", true);
+        agent.SetDestination(walkpoints[currentWalkpointIndex].position);
+
+       
     }
 
     void Update()
