@@ -4,7 +4,7 @@ public class WinCon : MonoBehaviour
 {
 
     [SerializeField] int WinPoints;
-    int points;
+    public int points;
     [SerializeField] GameObject winScreen;
     [SerializeField] Timer timer;
     [SerializeField] GameObject player;
