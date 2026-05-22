@@ -18,13 +18,15 @@ public class NavMeshAutoBake : MonoBehaviour
     void OnDisable()
     {
        
-        surface.RemoveData();
+        surface.navMeshData = null;
     }
 
     void BakeNavMesh()
     {
         if (surface != null)
         {
+            surface.layerMask = LayerMask.GetMask("Nothing");
+            surface.layerMask = LayerMask.GetMask("Ground");
             surface.BuildNavMesh();
             Debug.Log("NavMesh bakeado automáticamente al activar el objeto.");
         }
