@@ -16,6 +16,7 @@ public class SceneRandomizer : MonoBehaviour
     private int lastVersion = -1;
     public bool justOneTime = false;
     private bool alreadyDone = false;
+    public bool needsToRotate = false;
     Collider triggerCollider;
 
     void Awake()
@@ -55,7 +56,7 @@ public class SceneRandomizer : MonoBehaviour
         } while (index == lastVersion && versions.Length > 1);
 
         lastVersion = index;
-
+        
         AplicarVariante(versions [index]);
     }
 
@@ -64,7 +65,15 @@ public class SceneRandomizer : MonoBehaviour
         foreach (var obj in v.objetosActivar)
         {
             if (obj != null)
+            {
                 obj.transform.position = gameObject.transform.position; // Mover el objeto a la posición del trigger
+                obj.transform.rotation = gameObject.transform.rotation; // Mover el objeto a la posición del trigger
+                if (needsToRotate == true)
+                {
+                    obj.transform.rotation.y = 180f
+                }
+            }
+                
             obj.SetActive(true);
         }
 
