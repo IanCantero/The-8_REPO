@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_CuadroPared
+  m_Name: M_CuadroCasamiento
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 991a6daf851dfc344ab01b7970b2b1aa, type: 2}
   m_ModifiedSerializedProperties: 16
@@ -28,26 +28,26 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 34430b3f9cd3bc448b770896a3003569, type: 3}
+        m_Texture: {fileID: 2800000, guid: ffe181210eb52e246ab37e39555a5ce7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 72bcb7d7b4c36f34397b534ff69c15f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: a90491a832a0f254a9a496382c9cddc4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 34430b3f9cd3bc448b770896a3003569, type: 3}
+        m_Texture: {fileID: 2800000, guid: ffe181210eb52e246ab37e39555a5ce7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: b539c63d29718284597f1d930d8f8605, type: 3}
+        m_Texture: {fileID: 2800000, guid: 39b96c5e5a703c349a74746fbf112617, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+    - _Color: {r: 0.99056596, g: 0.99056596, b: 0.99056596, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5135107131429690883
