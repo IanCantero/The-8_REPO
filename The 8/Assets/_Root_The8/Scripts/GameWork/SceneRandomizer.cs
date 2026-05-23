@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SceneRandomizer : MonoBehaviour
 {
@@ -15,8 +16,22 @@ public class SceneRandomizer : MonoBehaviour
     private int lastVersion = -1;
     public bool justOneTime = false;
     private bool alreadyDone = false;
+    Collider triggerCollider;
 
+    void Awake()
+    {
+                triggerCollider = GetComponent<Collider>();
+        if (triggerCollider != null)
+        {
+            StartCoroutine(ColliderWait());
+        }
+    }
 
+    IEnumerator ColliderWait()
+    {
+        yield return new WaitForSeconds(2f);
+        triggerCollider.enabled = true;
+    }
 
     void OnTriggerEnter(Collider other)
     {
