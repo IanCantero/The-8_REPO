@@ -20,28 +20,20 @@ public class SceneRandomizer : MonoBehaviour
     Collider triggerCollider;
     [SerializeField] GameObject rotationMaster;
 
-    void Awake()
+
+    void OnEnable()
     {
-                triggerCollider = GetComponent<Collider>();
-        if (triggerCollider != null)
-        {
-            StartCoroutine(ColliderWait());
-        }
-    }
-  
-    /*
-    void OnDisable()
-    {
+        triggerCollider = GetComponent<Collider>();
+
         if (triggerCollider != null)
         {
             triggerCollider.enabled = false;
+            StartCoroutine(ColliderWait());
         }
     }
-    */
 
     IEnumerator ColliderWait()
     {
-        triggerCollider.enabled = false;
         yield return new WaitForSeconds(2f);
         triggerCollider.enabled = true;
     }
