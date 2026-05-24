@@ -18,6 +18,7 @@ public class SceneRandomizer : MonoBehaviour
     private bool alreadyDone = false;
     public bool needsToRotate = false;
     Collider triggerCollider;
+    [SerializeField] GameObject rotationMaster;
 
     void Awake()
     {
@@ -27,9 +28,20 @@ public class SceneRandomizer : MonoBehaviour
             StartCoroutine(ColliderWait());
         }
     }
+  
+    /*
+    void OnDisable()
+    {
+        if (triggerCollider != null)
+        {
+            triggerCollider.enabled = false;
+        }
+    }
+    */
 
     IEnumerator ColliderWait()
     {
+        triggerCollider.enabled = false;
         yield return new WaitForSeconds(2f);
         triggerCollider.enabled = true;
     }
@@ -66,12 +78,13 @@ public class SceneRandomizer : MonoBehaviour
         {
             if (obj != null)
             {
-                obj.transform.position = gameObject.transform.position; // Mover el objeto a la posición del trigger
-                obj.transform.rotation = gameObject.transform.rotation; // Mover el objeto a la posición del trigger
                 if (needsToRotate == true)
                 {
-                    obj.transform.rotation.y = 180f
+                    rotationMaster.transform.Rotate(0f, 180f, 0f);
                 }
+                obj.transform.position = gameObject.transform.position; // Mover el objeto a la posición del trigger
+                obj.transform.rotation = rotationMaster.transform.rotation; // Mover el objeto a la posición del trigger
+               
             }
                 
             obj.SetActive(true);
