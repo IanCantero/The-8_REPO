@@ -9,6 +9,7 @@ public class GrannyAIBase : MonoBehaviour
 
     NavMeshAgent agent;
     Animator anim;
+    [SerializeField] GameObject startPoint;
 
     private enum State
     {
@@ -62,6 +63,20 @@ public class GrannyAIBase : MonoBehaviour
         agent.SetDestination(walkpoints[currentWalkpointIndex].position);
 
        
+    }
+    
+    void OnEnable()
+    {
+        currentState = State.Sitting;
+        currentWalkpointIndex = 0;
+        agent.isStopped = true;
+        anim.SetBool("isWalking", false);
+        anim.SetTrigger("isSitting");
+        if (startPoint != null)
+        {
+            transform.position = startPoint.transform.position;
+            transform.rotation = Quaternion.LookRotation(startPoint.transform.forward);
+        }   
     }
 
     void Update()
