@@ -8,6 +8,7 @@ public class WinCon : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] Timer timer;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject scenes;
 
     void Awake()
     {
@@ -22,7 +23,8 @@ public class WinCon : MonoBehaviour
         {
             timer.isCounting = false;
            winScreen.SetActive(true);
-           timer.MostrarTiempo();
+            scenes.SetActive(false);
+            timer.MostrarTiempo();
             WinConfiguration();
         }
     }
