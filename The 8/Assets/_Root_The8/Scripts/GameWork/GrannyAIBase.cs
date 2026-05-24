@@ -22,11 +22,13 @@ public class GrannyAIBase : MonoBehaviour
     State currentState = State.Sitting;
     int currentWalkpointIndex = 0;
 
-
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+    }
+    void Start()
+    {
         anim.SetTrigger("isSitting");
         //Asunsion quieta
         agent.isStopped = true; 
@@ -74,8 +76,8 @@ public class GrannyAIBase : MonoBehaviour
         anim.SetTrigger("isSitting");
         if (startPoint != null)
         {
-            transform.position = startPoint.transform.position;
-            transform.rotation = Quaternion.LookRotation(startPoint.transform.forward);
+            agent.Warp(startPoint.transform.position);
+            transform.rotation = startPoint.transform.rotation;
         }   
     }
 
